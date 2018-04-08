@@ -5,7 +5,7 @@
     import java.sql.ResultSet;  
     import java.util.ArrayList;  
     import java.util.Map;  
-    import javax.faces.bean.ManagedBean;  
+    import javax.faces.bean.ManagedBean;
     import javax.faces.bean.RequestScoped;  
     import javax.faces.context.FacesContext;  
     @ManagedBean
@@ -131,7 +131,7 @@
     try{  
     connection = getConnection();  
     Statement stmt=getConnection().createStatement();    
-    ResultSet rs=stmt.executeQuery("select * from matkul where kodemk = "+(kodemk));  
+    ResultSet rs=stmt.executeQuery("select * from matkul where kodemk = \""+kodemk+"\"");  
     rs.next();  
     user = new User();  
     user.setKodemk(rs.getString("kodemk"));
@@ -143,7 +143,8 @@
     System.out.println(rs.getString("nama"));  
     sessionMap.put("editUser", user);  
     connection.close();  
-    }catch(Exception e){  
+    }catch(Exception e){
+    System.out.println(user.getNama());
     System.out.println(e);  
     }         
     return "/edit.xhtml?faces-redirect=true";  
@@ -172,10 +173,11 @@
     public void delete(String kodemk){  
     try{  
     connection = getConnection();    
-    PreparedStatement stmt = connection.prepareStatement("delete from matkul where kodemk = "+kodemk);    
+    PreparedStatement stmt = connection.prepareStatement("delete from matkul where kodemk = \""+kodemk+"\"");
+       System.out.println(stmt);
     stmt.executeUpdate();    
     }catch(Exception e){  
-    System.out.println(e);  
+    System.out.println(e);
     }  
     }  
     // Used to set user gender  
