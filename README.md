@@ -9,5 +9,5 @@ Pembuatan JSF(java server faces) untuk melakukan CRUD(Create Read Update Delete)
 
 ### Installing
 
-import  mysql database terlebih dahulu, yang berada pada folder mysql. Selanjutnya ganti user mysql pada file User.java
+import  mysql database terlebih dahulu, yang berada pada folder mysql. Pada source code diatas nama database defaultnya adalah kuliah. Selanjutnya ganti user mysql pada file User.java
 ## Built With
