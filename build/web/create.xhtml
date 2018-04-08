@@ -1,0 +1,89 @@
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+    <html xmlns="http://www.w3.org/1999/xhtml"  
+    xmlns:h="http://xmlns.jcp.org/jsf/html"  
+    xmlns:f="http://xmlns.jcp.org/jsf/core">  
+    <h:head>  
+    <title>User Registration Form</title>  
+    <h:outputStylesheet name="src/resource/css/bootstrap.min.css"/>  
+    </h:head>  
+    <h:body>  
+    <h:form id="form" class="form-horizontal">  
+    <div class="form-group">  
+    <div class="col-sm-4"></div>  
+    <div  class="col-sm-4">  
+    <h2 style="text-align: center">Provide Following Details</h2>  
+    </div>  
+    </div>  
+    <hr/>
+    <div class="form-group">  
+    <h:outputLabel for="kodemk" class="control-label col-sm-4">Kode Mata Kuliah</h:outputLabel>  
+    <div class="col-sm-4">  
+        <h:inputText id="kodemk-id" value="#{user.kodemk}" class="form-control"   
+    validatorMessage="Kode mata kuliah harus diisi">  
+    <f:validateRequired />  
+    </h:inputText>  
+    </div>  
+    </div>
+    <div class="form-group">  
+    <h:outputLabel for="nama" class="control-label col-sm-4">Nama</h:outputLabel>  
+    <div class="col-sm-4">  
+        <h:inputText id="nama-id" value="#{user.nama}" class="form-control"   
+    validatorMessage="Nama harus diisi">  
+    <f:validateRequired />  
+    </h:inputText>  
+    </div>  
+    </div>  
+    <div class="form-group">  
+    <h:outputLabel for="kodedsn" class="control-label col-sm-4">Kode Dosen</h:outputLabel>  
+    <div class="col-sm-4">  
+        <h:inputText id="kodedsn-id" value="#{user.kodedsn}" class="form-control"   
+    validatorMessage="Kode Dosen harus diisi">  
+    <f:validateRequired/>  
+    </h:inputText>  
+    </div>  
+    </div>  
+    <div class="form-group">  
+    <h:outputLabel for="koderuang" class="control-label col-sm-4">kode Ruangan</h:outputLabel>  
+    <div class="col-sm-4">  
+    <h:inputText id="koderuang-id" value="#{user.koderuang}" class="form-control"   
+    validatorMessage="Kode Ruangan harus diisi">  
+    <f:validateRequired/>  
+    </h:inputText>  
+    </div>  
+    </div>  
+    <div class="form-group">  
+    <h:outputLabel for="semester" class="control-label col-sm-4">Semester</h:outputLabel>  
+    <div class="col-sm-4">  
+        <h:inputText id="semester-id" value="#{user.semester}" class="form-control" 
+                     validatorMessage="Semester harus diisi">    
+    <f:validateRequired/>  
+    </h:inputText>  
+    </div>  
+    </div>  
+    <div class="form-group">  
+    <h:outputLabel for="sks" class="control-label col-sm-4">SKS</h:outputLabel>  
+    <div class="col-sm-4">  
+   <h:inputText id="sks-id" value="#{user.sks}" class="form-control"   
+    validatorMessage="SKS harus diisi">  
+    <f:validateRequired/>  
+    </h:inputText>   
+    </div>  
+    </div>  
+    <div class="form-group">  
+    <div class="col-sm-4"></div>  
+    <div class="col-sm-4">  
+    <div class="col-sm-2">  
+    <h:commandButton value="Save" action="#{user.save()}" class="btn btn-success"   
+    style="width: 80px;"></h:commandButton>  
+    </div>  
+    <div class="col-sm-1">  
+    </div>  
+    <div class="col-sm-2">  
+    <h:link outcome="index" value="lihat Record" class="btn btn-primary" />  
+    </div>  
+    </div>  
+    </div>  
+    </h:form>  
+    </h:body>  
+    </html>  

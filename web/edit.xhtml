@@ -1,0 +1,62 @@
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+    <html xmlns="http://www.w3.org/1999/xhtml"  
+    xmlns:h="http://xmlns.jcp.org/jsf/html"  
+    xmlns:f="http://xmlns.jcp.org/jsf/core">  
+    <h:head>  
+    <title>Halaman Edit Data</title>  
+    <h:outputStylesheet name="/css/bootstrap.min.css"/>  
+    </h:head>  
+    <h:body>  
+    <h:form id="form" class="form-horizontal">  
+    <div class="form-group">  
+    <div class="col-sm-2"></div>  
+    <h2 style="text-align: center" class="col-sm-4">Edit Data</h2>  
+    </div>  
+    <hr/>
+    <div class="form-group">  
+    <h:outputLabel for="kodemk" class="control-label col-sm-2">Kode Mata Kuliah</h:outputLabel>  
+    <div class="col-sm-4">  
+    <h:inputText id="kodemk-id" value="#{editUser.kodemk}" class="form-control"/>  
+    </div>  
+    </div> 
+    <div class="form-group">  
+    <h:outputLabel for="nama" class="control-label col-sm-2">Nama</h:outputLabel>  
+    <div class="col-sm-4">  
+    <h:inputText id="nama-id" value="#{editUser.nama}" class="form-control"/>  
+    </div>  
+    </div>  
+    <div class="form-group">  
+    <h:outputLabel for="kodedsn" class="control-label col-sm-2">Kode Dosen</h:outputLabel>  
+    <div class="col-sm-4">  
+    <h:inputText id="kodedsn-id" value="#{editUser.kodedsn}" class="form-control"/>  
+    </div>  
+    </div>  
+    <div class="form-group">  
+    <h:outputLabel for="koderuang" class="control-label col-sm-2">Kode Ruangan</h:outputLabel>  
+    <div class="col-sm-4">  
+    <h:inputText id="koderuang-id" value="#{editUser.koderuang}" class="form-control"/>  
+    </div>  
+    </div>  
+    <div class="form-group">  
+    <h:outputLabel for="semester" class="control-label col-sm-2">Semester</h:outputLabel>  
+    <div class="col-sm-4">  
+    <h:inputText id="Semester-id" value="#{editUser.semester}" class="form-control"/>  
+    </div>  
+    </div> 
+    <div class="form-group">  
+    <h:outputLabel for="sks" class="control-label col-sm-2">SKS</h:outputLabel>  
+    <div class="col-sm-4">  
+    <h:inputText id="sks-id" value="#{editUser.sks}" class="form-control"/> 
+    </div>  
+    </div>  
+    <div class="form-group">  
+    <div class="col-sm-2"></div>  
+    <div class="col-sm-4">  
+    <center><h:commandButton value="Update" action="#{user.update(editUser)}"   
+    class="btn btn-primary" style="width: 80px;"></h:commandButton></center>  
+    </div>  
+    </div>  
+    </h:form>  
+    </h:body>  
+    </html>  
